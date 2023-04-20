@@ -1,6 +1,7 @@
 import styles from "./Home.module.scss";
 
 import Background from "../../ui/background/Background";
+import ButtonColor from "../../ui/button-color/ButtonColor";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
                 <h5 className={styles.subtitle}>
                     Инвестиции в собственный бизнес по добыче цифрового золота.
                 </h5>
+                <ButtonColor text="Зарегестрироватся" shadow />
             </div>
         </div>
     );
