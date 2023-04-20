@@ -125,24 +125,8 @@ const Background = () => {
                     fpsLimit: 120,
                 }}
             />
-            <div
-                className={styles.ball}
-                style={{
-                    right: 0,
-                    bottom: -150,
-                    backgroundColor: "#2B59FF",
-                    filter: "blur(300px)",
-                }}
-            ></div>
-            <div
-                className={styles.ball}
-                style={{
-                    bottom: -200,
-                    left: -200,
-                    backgroundColor: "rgba(41, 255, 217, 0.8)",
-                    filter: "blur(200px)",
-                }}
-            ></div>
+            <div className={styles.ball01}></div>
+            <div className={styles.ball02}></div>
             <div
                 className={styles.filter}
                 style={{
