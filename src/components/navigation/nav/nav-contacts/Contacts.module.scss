@@ -1,0 +1,21 @@
+.contacts {
+    align-items: center;
+    display: flex;
+    gap: 92px;
+}
+
+.social {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.mail {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+
+    & > :last-of-type {
+        margin-left: 15px;
+    }
+}

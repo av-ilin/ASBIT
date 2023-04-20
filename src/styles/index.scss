@@ -1,13 +1,16 @@
 @import "reset.css";
 @import "fonts.css";
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     background-color: white;
     color: #1b1b22;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-
-    // height: 300vh;
 }
 
 .container {
