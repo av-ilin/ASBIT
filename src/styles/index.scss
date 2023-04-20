@@ -2,6 +2,16 @@
 @import "fonts.css";
 
 body {
-    background-color: black;
-    color: wheat;
+    background-color: white;
+    color: #1b1b22;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+
+    height: 300vh;
+}
+
+.container {
+    position: relative;
+    max-width: 1202px;
+    margin: 0 auto;
 }
