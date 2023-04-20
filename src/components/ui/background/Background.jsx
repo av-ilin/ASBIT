@@ -21,6 +21,7 @@ const Background = () => {
                 init={particlesInit}
                 loaded={particlesLoaded}
                 options={{
+                    fullScreen: false,
                     particles: {
                         number: {
                             value: 200,
