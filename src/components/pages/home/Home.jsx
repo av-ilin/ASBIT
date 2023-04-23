@@ -2,6 +2,7 @@ import styles from "./Home.module.scss";
 
 import Background from "../../ui/background/Background";
 import ButtonColor from "../../ui/button-color/ButtonColor";
+import Plans from "./plans/Plans";
 
 const Home = () => {
     return (
@@ -15,6 +16,9 @@ const Home = () => {
                     Инвестиции в собственный бизнес по добыче цифрового золота.
                 </h5>
                 <ButtonColor text="Зарегестрироватся" shadow />
+            </div>
+            <div className="container">
+                <Plans />
             </div>
         </div>
     );
