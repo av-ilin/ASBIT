@@ -17,7 +17,12 @@ const Home = () => {
                 </h5>
                 <ButtonColor text="Зарегестрироватся" shadow />
             </div>
-            <div className="container">
+            <div
+                className="container"
+                style={{
+                    marginBottom: "50vh",
+                }}
+            >
                 <Plans />
             </div>
         </div>
