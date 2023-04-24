@@ -8,13 +8,13 @@ import "swiper/css/navigation";
 import { useState, useEffect, useRef } from "react";
 
 const Plans = () => {
-    const [swiper, setSwiper] = useState(undefined);
-    useEffect(changeVisible, [swiper]);
+    // const [swiper, setSwiper] = useState(undefined);
+    // useEffect(changeVisible, [swiper]);
 
     const nextElRef = useRef(null);
     const prevElRef = useRef(null);
 
-    function changeVisible() {
+    function updVisible(swiper) {
         if (swiper == undefined) return;
         for (let slide of swiper.slides) {
             if (
@@ -25,6 +25,11 @@ const Plans = () => {
                 slide.style.opacity = 1;
             else slide.style.opacity = 0;
         }
+
+        if (swiper.isEnd) nextElRef.current.style.opacity = 0;
+        else nextElRef.current.style.opacity = 1;
+        if (swiper.isBeginning) prevElRef.current.style.opacity = 0;
+        else prevElRef.current.style.opacity = 1;
     }
 
     return (
@@ -41,24 +46,11 @@ const Plans = () => {
                 nextEl: nextElRef.current,
             }}
             // onSwiper={setSwiper}
-            // onSlideChangeTransitionStart={changeVisible}
+            onSlideChangeTransitionStart={updVisible}
             onBeforeInit={(swiper) => {
                 swiper.params.navigation.prevEl = prevElRef.current;
                 swiper.params.navigation.nextEl = nextElRef.current;
             }}
-            injectStyles={[
-                `
-                .swiper-slide {
-                    background-color: aqua;
-                }
-                
-                .swiper-slide-prev,
-                .swiper-slide-active,
-                .swiper-slide-next {
-                    opacity: 1;
-                }
-                `,
-            ]}
         >
             <SwiperSlide className={styles.slide}></SwiperSlide>
             <SwiperSlide className={styles.slide}></SwiperSlide>
