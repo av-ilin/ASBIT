@@ -1,9 +1,9 @@
 import styles from "./PlansItem.module.scss";
-import { SwiperSlide, useSwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const PlansItem = () => {
-    const swiperSlide = useSwiperSlide();
+    // const swiperSlide = usewiperSlide();
     return <SwiperSlide className={styles.plan}></SwiperSlide>;
 };
 

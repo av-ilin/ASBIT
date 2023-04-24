@@ -1,0 +1,9 @@
+.swiper-slide {
+    background-color: aqua;
+}
+
+.swiper-slide-prev,
+.swiper-slide-active,
+.swiper-slide-next {
+    opacity: 1;
+}
