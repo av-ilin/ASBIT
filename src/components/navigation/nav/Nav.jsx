@@ -1,6 +1,5 @@
 import styles from "./Nav.module.scss";
 
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Contacts from "./nav-contacts/Contacts";
@@ -14,7 +13,7 @@ const Navigation = () => {
             if (window.scrollY > 20) setIsNavScroll(true);
             else setIsNavScroll(false);
         };
-        window.addEventListener("scroll", onScroll);
+        document.addEventListener("scroll", onScroll);
         return () => {
             window.removeEventListener("scroll", onScroll);
         };

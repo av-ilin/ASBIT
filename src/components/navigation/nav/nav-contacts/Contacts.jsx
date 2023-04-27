@@ -1,7 +1,6 @@
 import styles from "./Contacts.module.scss";
 
 const Contacts = ({ isNavScroll = false }) => {
-    console.log(isNavScroll);
     return (
         <div
             className={
