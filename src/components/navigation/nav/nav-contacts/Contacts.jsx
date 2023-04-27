@@ -1,8 +1,14 @@
 import styles from "./Contacts.module.scss";
 
-const Contacts = () => {
+const Contacts = ({ isNavScroll = false }) => {
+    console.log(isNavScroll);
     return (
-        <div className={styles.contacts}>
+        <div
+            className={
+                styles.contacts +
+                (isNavScroll ? " " + styles["contacts-hide"] : "")
+            }
+        >
             <div className={styles.social}>
                 <a target="_blank" href="https://vk.com/">
                     <img src="images/social/VK.svg" alt="vk logo" />

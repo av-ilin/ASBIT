@@ -11,7 +11,8 @@ const Navigation = () => {
 
     useEffect(() => {
         const onScroll = () => {
-            console.log("scroll");
+            if (window.scrollY > 20) setIsNavScroll(true);
+            else setIsNavScroll(false);
         };
         window.addEventListener("scroll", onScroll);
         return () => {
@@ -20,23 +21,27 @@ const Navigation = () => {
     }, []);
 
     return (
-        <div className={styles.nav}>
-            {isNavScroll && <div className={styles.bg}></div>}
+        <div
+            className={
+                styles.nav + (isNavScroll ? " " + styles["nav-scroll"] : "")
+            }
+        >
+            <div className={styles.bg}></div>
             <div className={styles.container}>
                 <Link className={styles["logo-wrap"]} to="/">
                     <img
                         className={styles["logo"]}
                         src="images/logo.svg"
-                        alt=""
+                        alt="logo"
                     />
                     <img
                         className={styles["logo-hover"]}
                         src="images/logo-hover.svg"
-                        alt=""
+                        alt="logo"
                     />
                 </Link>
                 <div className={styles.box}>
-                    <Contacts />
+                    <Contacts isNavScroll={isNavScroll} />
                     <Menu />
                 </div>
             </div>
