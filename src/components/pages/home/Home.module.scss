@@ -1,10 +1,13 @@
 .home {
     overflow-x: hidden;
     position: relative;
+    // min-height: 100vh;
+    // height: 1px;
 }
 
 .container {
     composes: container from "../../../styles/index.scss";
+    // height: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
