@@ -28,7 +28,16 @@ const Navigation = () => {
         >
             <div className={styles.bg}></div>
             <div className={styles.container}>
-                <Link className={styles["logo-wrap"]} to="/">
+                <div
+                    className={styles["logo-wrap"]}
+                    onClick={() => {
+                        window.scrollTo({
+                            behavior: "smooth",
+                            top: 0,
+                            left: 0,
+                        });
+                    }}
+                >
                     <img
                         className={styles["logo"]}
                         src="images/logo.svg"
@@ -39,7 +48,7 @@ const Navigation = () => {
                         src="images/logo-hover.svg"
                         alt="logo"
                     />
-                </Link>
+                </div>
                 <div className={styles.box}>
                     <Contacts isNavScroll={isNavScroll} />
                     <Menu />
