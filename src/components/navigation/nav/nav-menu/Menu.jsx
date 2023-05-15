@@ -9,7 +9,7 @@ const Menu = () => {
                 Главная
             </Link>
             <Link className={styles.item} to="/">
-                Инвесторам
+                Начать
             </Link>
             <Link className={styles.item} to="/">
                 О нас
