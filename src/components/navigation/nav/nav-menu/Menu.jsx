@@ -11,7 +11,7 @@ const Menu = () => {
             <Link className={styles.item} to="/">
                 Начать
             </Link>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/about">
                 О нас
             </Link>
             <Link className={styles.item} to="/">

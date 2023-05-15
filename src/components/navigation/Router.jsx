@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Navigation from "./nav/Nav";
 import Home from "../pages/home/Home";
+import About from "../pages/about/About";
 
 const Router = () => {
     // const basename = "/projects/BefaArt/";
@@ -11,6 +12,7 @@ const Router = () => {
             <Navigation />
             <Routes>
                 <Route element={<Home />} exact path="/" />
+                <Route element={<About />} exact path="/about" />
                 <Route
                     element={
                         <div
