@@ -1,7 +1,13 @@
 import styles from "./About.module.scss";
 
+import Activity from "./activity/Activity";
+
 const About = () => {
-    return <div className={styles.about}></div>;
+    return (
+        <div className={styles.about}>
+            <Activity />
+        </div>
+    );
 };
 
 export default About;

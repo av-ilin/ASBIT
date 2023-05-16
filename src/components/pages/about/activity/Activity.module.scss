@@ -1,0 +1,52 @@
+.activity {
+    min-height: 100vh;
+    background-image: url("../../../../../public/images/about_bg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1440px) {
+        background-size: auto;
+    }
+}
+
+.inner {
+    composes: container from "../../../../styles/index.scss";
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+}
+
+.text {
+    max-width: 610px;
+    margin-bottom: 50px;
+
+    h2 {
+        font-weight: 600;
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 148%;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 148%;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+}
