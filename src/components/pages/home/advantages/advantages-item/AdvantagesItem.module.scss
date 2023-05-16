@@ -1,9 +1,13 @@
 .wrapper {
     width: 386px;
     height: 84px;
-
     background: linear-gradient(180deg, #f6f9fd 0%, #f1f5fa 100%);
     border-radius: 30px;
+
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 .inner {
