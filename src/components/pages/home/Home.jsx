@@ -4,6 +4,7 @@ import Background from "../../ui/background/Background";
 import ButtonColor from "../../ui/button-color/ButtonColor";
 import Plans from "./plans/Plans";
 import Advantages from "./advantages/Advantages";
+import Activity from "./activity/Activity";
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
                 <Plans />
                 <Advantages />
             </div>
+            <Activity />
         </div>
     );
 };
