@@ -1,17 +1,8 @@
 .activity {
-    min-height: 840px;
-    background-image: url("../../../../../public/images/about_bg.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-
+    padding: 60px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @media (max-width: 1440px) {
-        background-size: auto;
-    }
 }
 
 .inner {

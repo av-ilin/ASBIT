@@ -3,6 +3,13 @@
     position: relative;
     // min-height: 100vh;
     // height: 1px;
+    background-image: url("../../../../public/images/about_bg.png");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media (max-width: 1440px) {
+        background-size: auto;
+    }
 }
 
 .container {
