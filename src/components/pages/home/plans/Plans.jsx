@@ -1,11 +1,12 @@
 import styles from "./Plans.module.scss";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import { useRef } from "react";
+
+import PlansItem from "./plans-item/PlansItem";
 
 const Plans = () => {
     // const [swiper, setSwiper] = useState(undefined);
@@ -15,7 +16,7 @@ const Plans = () => {
     const prevElRef = useRef(null);
 
     function updVisible(swiper) {
-        if (swiper == undefined) return;
+        if (swiper === undefined) return;
         for (let slide of swiper.slides) {
             if (
                 slide.classList.contains("swiper-slide-prev") ||
@@ -52,10 +53,18 @@ const Plans = () => {
                 swiper.params.navigation.nextEl = nextElRef.current;
             }}
         >
-            <SwiperSlide className={styles.slide}></SwiperSlide>
-            <SwiperSlide className={styles.slide}></SwiperSlide>
-            <SwiperSlide className={styles.slide}></SwiperSlide>
-            <SwiperSlide className={styles.slide}></SwiperSlide>
+            <SwiperSlide className={styles.slide}>
+                <PlansItem />
+            </SwiperSlide>
+            <SwiperSlide className={styles.slide}>
+                <PlansItem />
+            </SwiperSlide>
+            <SwiperSlide className={styles.slide}>
+                <PlansItem />
+            </SwiperSlide>
+            <SwiperSlide className={styles.slide}>
+                <PlansItem />
+            </SwiperSlide>
 
             <div className={styles.prevEl} ref={prevElRef} />
             <div className={styles.nextEl} ref={nextElRef} />
