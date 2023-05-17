@@ -4,7 +4,7 @@ const Activity = () => {
     return (
         <div className={styles.activity}>
             <div className={styles.inner}>
-                <img src="images/about_phone.png" alt="" />
+                <img src="images/home_activity-phone.png" alt="" />
                 <div className={styles.description}>
                     <div className={styles.text}>
                         <h2>Деятельность компании</h2>
@@ -20,7 +20,7 @@ const Activity = () => {
                     <div className={styles.list}>
                         <div>
                             <img
-                                src="images/about_activity-trade.svg"
+                                src="images/home_activity-trade.svg"
                                 alt="trade icon"
                             />
                             <p>
@@ -30,7 +30,7 @@ const Activity = () => {
                         </div>
                         <div>
                             <img
-                                src="images/about_activity-mine.svg"
+                                src="images/home_activity-mine.svg"
                                 alt="mine icon"
                             />
                             <p>
