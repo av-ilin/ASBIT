@@ -54,16 +54,16 @@ const Plans = () => {
             }}
         >
             <SwiperSlide className={styles.slide}>
-                <PlansItem />
+                <PlansItem percent={1} />
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
-                <PlansItem />
+                <PlansItem percent={2} />
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
-                <PlansItem />
+                <PlansItem percent={3} />
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
-                <PlansItem />
+                <PlansItem percent={4} />
             </SwiperSlide>
 
             <div className={styles.prevEl} ref={prevElRef} />
