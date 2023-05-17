@@ -8,13 +8,13 @@ const Menu = () => {
             <Link className={styles.item} to="/">
                 Главная
             </Link>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/start">
                 Начать
             </Link>
             <Link className={styles.item} to="/about">
                 О нас
             </Link>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/faq">
                 Faq & Rules
             </Link>
             <ButtonColor text="Перейти в бот" width={171} height={46} />

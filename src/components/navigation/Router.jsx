@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navigation from "./nav/Nav";
 import Home from "../pages/home/Home";
 import About from "../pages/about/About";
+import Start from "../pages/start/Start";
+import FAQ from "../pages/faq/FAQ";
 
 const Router = () => {
     // const basename = "/projects/BefaArt/";
@@ -12,7 +14,9 @@ const Router = () => {
             <Navigation />
             <Routes>
                 <Route element={<Home />} exact path="/" />
+                <Route element={<Start />} exact path="/start" />
                 <Route element={<About />} exact path="/about" />
+                <Route element={<FAQ />} exact path="/faq" />
                 <Route
                     element={
                         <div
