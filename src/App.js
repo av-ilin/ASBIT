@@ -1,4 +1,4 @@
-import Router from "./components/navigation/Router";
+import Router from "./components/navigation/router/Router";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
