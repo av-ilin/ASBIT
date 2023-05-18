@@ -49,6 +49,6 @@
 
         border-radius: 50%;
         background: linear-gradient(180deg, #6989fe 0%, #3c64f4 100%);
-        filter: drop-shadow(0px 10px 30px rgba(17, 17, 255, 0.3));
+        box-shadow: 0px 10px 30px rgba(17, 17, 255, 0.3);
     }
 }
