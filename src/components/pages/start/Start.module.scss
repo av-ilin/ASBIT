@@ -1,3 +1,9 @@
 .start {
     padding-top: var(--nav-padding);
+    background: url(../../../../public/images/start_bg-sphere01.png),
+        url(../../../../public/images/start_bg-sphere02.png);
+    background-position: top calc(var(--nav-padding) + 25px) left,
+        bottom 50px right;
+    background-repeat: no-repeat;
+    background-size: 5%, 10%;
 }
