@@ -1,30 +1,24 @@
 import styles from "./Nav.module.scss";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 import Contacts from "./nav-contacts/Contacts";
 import Menu from "./nav-menu/Menu";
 
 const Navigation = () => {
-    const [isNavScroll, setIsNavScroll] = useState(false);
+    const location = useLocation();
+    const valScroll = useSelector((state) => state.scroll);
+    const [isHide, setIsHide] = useState(false);
 
     useEffect(() => {
-        const onScroll = () => {
-            if (window.scrollY > 20) setIsNavScroll(true);
-            else setIsNavScroll(false);
-        };
-        document.addEventListener("scroll", onScroll);
-        return () => {
-            window.removeEventListener("scroll", onScroll);
-        };
-    }, []);
+        if (location.pathname == "/" && valScroll < 20) setIsHide(false);
+        else setIsHide(true);
+    }, [location, valScroll]);
 
     return (
-        <div
-            className={
-                styles.nav + (isNavScroll ? " " + styles["nav-scroll"] : "")
-            }
-        >
+        <div className={styles.nav + (isHide ? " " + styles["nav-hide"] : "")}>
             <div className={styles.bg}></div>
             <div className={styles.container}>
                 <div
@@ -49,7 +43,7 @@ const Navigation = () => {
                     />
                 </div>
                 <div className={styles.box}>
-                    <Contacts isNavScroll={isNavScroll} />
+                    <Contacts isNavHide={isHide} />
                     <Menu />
                 </div>
             </div>

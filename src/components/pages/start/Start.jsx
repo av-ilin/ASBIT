@@ -4,7 +4,7 @@ import HowStart from "./how-start/HowStart";
 
 const Start = () => {
     return (
-        <div className={styles.start}>
+        <div className={styles.start} style={{ marginBottom: "300vh" }}>
             <div className="container">
                 <HowStart />
             </div>

@@ -1,11 +1,11 @@
 import styles from "./Contacts.module.scss";
 
-const Contacts = ({ isNavScroll = false }) => {
+const Contacts = ({ isNavHide = false }) => {
     return (
         <div
             className={
                 styles.contacts +
-                (isNavScroll ? " " + styles["contacts-hide"] : "")
+                (isNavHide ? " " + styles["contacts-hide"] : "")
             }
         >
             <div className={styles.social}>
