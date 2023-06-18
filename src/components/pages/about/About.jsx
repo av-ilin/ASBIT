@@ -3,6 +3,7 @@ import styles from "./About.module.scss";
 import AboutAdvantages from "./about-advantages/AboutAdvantages";
 import AboutProfit from "./about-profit/AboutProfit";
 import AboutCompany from "./about-company/AboutCompany";
+import AboutPay from "./about-pay/AboutPay";
 
 const About = () => {
     return (
@@ -11,6 +12,7 @@ const About = () => {
                 <AboutAdvantages />
                 <AboutProfit />
                 <AboutCompany />
+                <AboutPay />
             </div>
         </div>
     );
