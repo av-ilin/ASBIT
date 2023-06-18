@@ -8,7 +8,7 @@ import Start from "../../pages/start/Start";
 import FAQ from "../../pages/faq/FAQ";
 
 const Router = () => {
-    // const basename = "/projects/BefaArt/";
+    // const basename = "/projects/asbit/";
     const basename = "";
     return (
         <BrowserRouter basename={basename}>

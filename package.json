@@ -2,6 +2,7 @@
     "name": "as-bit",
     "version": "0.1.0",
     "private": true,
+    "__homepage": "https://av-ilin.github.io/projects/asbit",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",
