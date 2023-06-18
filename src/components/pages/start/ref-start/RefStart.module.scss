@@ -1,0 +1,31 @@
+.partners {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 84px 90px 84px 60px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: linear-gradient(180deg, #6989fe 0%, #3c64f4 100%);
+    mix-blend-mode: normal;
+    border-radius: 40px;
+}
+
+.info {
+    max-width: 530px;
+    color: #ffffff;
+
+    h2 {
+        font-weight: 600;
+        font-size: 34px;
+        text-transform: uppercase;
+        line-height: 140%;
+    }
+
+    p {
+        margin: 16px 0 50px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+    }
+}
