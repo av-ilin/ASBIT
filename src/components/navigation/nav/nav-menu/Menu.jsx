@@ -15,7 +15,7 @@ const Menu = () => {
                 О нас
             </Link>
             <Link className={styles.item} to="/faq">
-                Faq & Rules
+                FAQ & Rules
             </Link>
             <ButtonColor text="Перейти в бот" width={171} height={46} />
         </div>
