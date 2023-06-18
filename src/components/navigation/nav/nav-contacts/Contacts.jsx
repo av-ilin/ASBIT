@@ -16,7 +16,7 @@ const Contacts = ({ isNavHide = false }) => {
                     target="_blank"
                     href="https://www.youtube.com/watch?v=Q-ejz2RmueE"
                 >
-                    <img src="images/social/YouTube.svg" alt="YouTube logo" />
+                    <img src="images/social/Youtube.svg" alt="YouTube logo" />
                 </a>
                 <a target="_blank" href="https://t.me/av_ilin">
                     <img src="images/social/Telegram.svg" alt="tg logo" />
