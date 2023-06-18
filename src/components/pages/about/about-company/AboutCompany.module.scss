@@ -1,0 +1,26 @@
+.company {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.text {
+    max-width: 590px;
+
+    h1 {
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 140%;
+        color: #1a1b24;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #000000;
+    }
+}
