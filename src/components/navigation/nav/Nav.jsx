@@ -6,20 +6,27 @@ import { useLocation } from "react-router-dom";
 
 import Contacts from "./nav-contacts/Contacts";
 import Menu from "./nav-menu/Menu";
+import Burger from "./nav-burger/Burger";
 
 const Navigation = () => {
     const location = useLocation();
-    const valScroll = useSelector((state) => state.scroll);
-    const [isHide, setIsHide] = useState(false);
+    const windowScroll = useSelector((state) => state.scroll);
+    const window_w = useSelector((state) => state.window_w);
+    const [isBurger, setIsBurger] = useState(false);
 
     useEffect(() => {
-        if (location.pathname == "/" && valScroll < 20) setIsHide(false);
-        else setIsHide(true);
-    }, [location, valScroll]);
+        if (location.pathname == "/" && windowScroll < 20 && window_w > 1024)
+            setIsBurger(false);
+        else setIsBurger(true);
+    }, [location, windowScroll, window_w]);
 
     return (
-        <div className={styles.nav + (isHide ? " " + styles["nav-hide"] : "")}>
-            <div className={styles.bg}></div>
+        <div
+            className={styles.nav + (isBurger ? " " + styles["nav-hide"] : "")}
+            style={{
+                background: windowScroll < 20 ? "transparent" : "",
+            }}
+        >
             <div className={styles.container}>
                 <div
                     className={styles["logo-wrap"]}
@@ -42,9 +49,14 @@ const Navigation = () => {
                         alt="logo"
                     />
                 </div>
-                <div className={styles.box}>
-                    <Contacts isNavHide={isHide} />
-                    <Menu />
+                <div
+                    className={
+                        styles.box +
+                        (isBurger ? " " + styles["box-burger"] : "")
+                    }
+                >
+                    <Contacts isBurger={isBurger} />
+                    {isBurger ? <Burger /> : <Menu />}
                 </div>
             </div>
         </div>

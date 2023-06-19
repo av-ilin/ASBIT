@@ -10,8 +10,8 @@ function App() {
         dispatch({ type: "SET_WIDTH", payload: window.innerWidth });
 
     useEffect(() => {
-        document.addEventListener("scroll", onScroll);
-        document.addEventListener("resize", onResize);
+        window.addEventListener("scroll", onScroll);
+        window.addEventListener("resize", onResize);
         return () => {
             window.removeEventListener("scroll", onScroll);
             window.removeEventListener("resize", onResize);
