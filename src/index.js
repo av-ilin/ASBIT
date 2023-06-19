@@ -8,11 +8,14 @@ import App from "./App";
 
 const defaultState = {
     scroll: 0,
+    window_w: 0,
 };
 const reducer = (state = defaultState, action) => {
     switch (action.type) {
         case "SET_SCROLL":
             return { ...state, scroll: action.payload };
+        case "SET_WIDTH":
+            return { ...state, window_w: action.payload };
         default:
             return state;
     }
